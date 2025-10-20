@@ -10,12 +10,23 @@
             // circle.DisplayShapeInfo();
             // rectangle.DisplayShapeInfo(); 
             #endregion
-            BasicAuthenticationService basicAuthenticationService = new BasicAuthenticationService()
-            { Password = "password", Username = "admin", Role = "Administrator" };
-           
-            Console.WriteLine(basicAuthenticationService.AuthenticateUser());
-        
-            Console.WriteLine(basicAuthenticationService.AuthorizeUser());
+            #region EX02
+            //BasicAuthenticationService basicAuthenticationService = new BasicAuthenticationService()
+            //{ Password = "password", Username = "admin", Role = "Administrator" };
+
+            //Console.WriteLine(basicAuthenticationService.AuthenticateUser());
+
+            //Console.WriteLine(basicAuthenticationService.AuthorizeUser()); 
+            #endregion
+            SmsNotificationService smsNotificationService = new SmsNotificationService();
+            PushNotificationService pushNotificationService = new PushNotificationService();
+            EmailNotificationService emailNotificationService = new EmailNotificationService();
+            smsNotificationService.SendNotification("+1234567890", "Your order has been shipped.");
+            pushNotificationService.SendNotification("user_device_token", "You have a new message.");
+            emailNotificationService.SendNotification("rehabomar789@gmail.com","you have an Email ");
+
+
+            Console.WriteLine();
         }
     }
 }
