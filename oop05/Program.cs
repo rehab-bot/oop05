@@ -5,18 +5,18 @@
         static void Main(string[] args)
         {
             #region EX01
-            Circle circle = new Circle(5);
-            Rectangle rectangle = new Rectangle(4, 6);
-            circle.DisplayShapeInfo();
-            rectangle.DisplayShapeInfo();
+            //Circle circle = new Circle(5);
+            //Rectangle rectangle = new Rectangle(4, 6);
+            //circle.DisplayShapeInfo();
+            //rectangle.DisplayShapeInfo();
             #endregion
             #region EX02
-            //BasicAuthenticationService basicAuthenticationService = new BasicAuthenticationService()
-            //{ Password = "password", Username = "admin", Role = "Administrator" };
+            BasicAuthenticationService basicAuthenticationService = new BasicAuthenticationService()
+            { Password = "password", Username = "admin", Role = "Administrator" };
 
-            //Console.WriteLine(basicAuthenticationService.AuthenticateUser());
+            Console.WriteLine(basicAuthenticationService.AuthenticateUser());
 
-            //Console.WriteLine(basicAuthenticationService.AuthorizeUser());
+            Console.WriteLine(basicAuthenticationService.AuthorizeUser());
             #endregion
             #region EX03
             //SmsNotificationService smsNotificationService = new SmsNotificationService();
